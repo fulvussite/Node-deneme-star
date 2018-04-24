@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+    <div class="container">
+
+        <form class="main-show" action="/games/ <%= game.gameId %>?_method=PUT" method="POST">
+            <div class="form-grouup">
+                <h1>Add game</h1>
+                <label for="gametitle">game Title</label>
+                <input type="text" class="form-control" id="gametitle" placeholder="Enter Title For game" value=" <%= game.title %>">
+            </div>
+            <div class="form-grouup">
+                <label for="gameimage"> game Image Url</label>
+                <input type="text" class="form-control" id="gameimage" placeholder="Enter İmage URL For game" value=" <%= game.image %>">
+            </div>
+            <div class="form-grouup">
+                <label for="gamecontent"> game Content Title</label>
+                <input type="text" class="form-control" id="gamecontent" placeholder="Enter Title For Content" value=" <%= game.content%>">
+            </div>
+            <br>
+            <textarea name="editor" id="myTextArea" value=" <%= game.icerik %>"></textarea>
+            <br>
+            <button class="btn btn-success" id="myButton"> Submit</button>
+
+        </form>
+
+    </div>
+
+    <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor');
+    </script>

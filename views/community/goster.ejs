@@ -1,0 +1,62 @@
+<% include ../partials/header %>
+
+	<div class="container">
+
+		<div class="main-show">
+
+			<h3 class="display-4 text-center main-title">
+				<%= community.adi %>
+			</h3>
+			<div class="row bg-light text-dark ">
+
+			
+					
+				
+				
+					<div class="main-content">
+						<%- community.aciklama %>
+					</div>
+
+
+			</div>
+		</div>
+
+
+	<ul class="list-unstyled  main-show">
+		<% community.yorumlar.forEach(function(yorum){ %>
+			<li class="media">
+
+				<img class="mr-3" src="../images/stormtrooper.ico">
+				<div class="media-body">
+					<p class="text-muted">
+						<%= yorum.yazar.username %>
+					</p>
+					<hr>
+					<p>
+						<%= yorum.text %>
+					</p>
+					<p class="text-muted">
+							<%= yorum.date %>
+						</p>
+				</div>
+			</li>
+			<hr class="main-hr">
+
+			<% }) %>
+
+				<%if(!currentUser) { %>
+
+					<%} else { %>
+						<li class="comment">
+							<% include ../yorumlar/yeni %>
+						</li>
+
+
+						<%} %>
+
+	</ul>
+
+
+
+	</div>
+	</div>

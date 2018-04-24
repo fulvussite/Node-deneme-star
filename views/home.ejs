@@ -1,0 +1,127 @@
+<% include ./partials/header %>
+
+<div class="container">
+
+  <div class="card-columns ">
+    <% foundHaber.forEach( (haber)=>{ %>
+      <div>
+
+        <a href="/habers/<%=haber._id%>" style="color: #fff;">
+
+          <div class="card text-center colmuns" style="border: 3px solid #0f770f">
+            <div class="card-header">
+              <h3 class="text-center">
+                <%=  haber.title %>
+              </h3>
+            </div>
+            <img class="card-img-top" src="<%=haber.image %>">
+            <div class="card-body bg-dark">
+
+              <h4 class="card-text">
+                <%= haber.content %>
+              </h4>
+              <p class="card-text">
+                <span class="text-muted">
+                  <%- haber.icerik.substring(0,100) %>..</p>
+              </span>
+              </p>
+            </div>
+        </a>
+
+
+        </div>
+        <% }); %>
+
+          <% foundmovies.forEach( (movies)=>{ %>
+            <div>
+
+              <a href="/moviess/<%=movies._id%>" style="color: #fff;">
+
+                <div class="card text-center colmuns" style="border: 3px solid #9b1111 ">
+                  <div class="card-header">
+                    <h3 class="text-center">
+                      <%=  movies.title %>
+                    </h3>
+                  </div>
+                  <img class="card-img-top" src="<%=movies.image %>">
+                  <div class="card-body bg-dark">
+
+                    <h4 class="card-text">
+                      <%= movies.content %>
+                    </h4>
+                    <p class="card-text">
+                      <span class="text-muted">
+                        <%- movies.icerik.substring(0,100) %>..</p>
+                    </span>
+                    </p>
+                  </div>
+              </a>
+
+
+              </div>
+              <% }); %>
+
+
+
+                <% foundtv.forEach( (tv)=>{ %>
+                  <div>
+
+                    <a href="/tvs/<%=tv._id%>" style="color: #fff;">
+
+                      <div class="card text-center colmuns" style="border: 3px solid #1139bf">
+                        <div class="card-header">
+                          <h3 class="text-center">
+                            <%=  tv.title %>
+                          </h3>
+                        </div>
+                        <img class="card-img-top" src="<%=tv.image %>">
+                        <div class="card-body bg-dark">
+
+                          <h4 class="card-text">
+                            <%= tv.content %>
+                          </h4>
+                          <p class="card-text">
+                            <span class="text-muted">
+                              <%- tv.icerik.substring(0,100) %>..</p>
+                          </span>
+                          </p>
+                        </div>
+                    </a>
+
+
+                    </div>
+                    <% }); %>
+
+
+                      <% foundgames.forEach( (game)=>{ %>
+                        <div>
+
+                          <a href="/games/<%=game._id%>" style="color: #fff;">
+
+                            <div class="card text-center colmuns" style="border: 3px solid #ffc300">
+                              <div class="card-header">
+                                <h3 class="text-center">
+                                  <%=  game.title %>
+                                </h3>
+                              </div>
+                              <img class="card-img-top" src="<%=game.image %>">
+                              <div class="card-body bg-dark">
+
+                                <h4 class="card-text">
+                                  <%= game.content %>
+                                </h4>
+                                <p class="card-text">
+                                  <span class="text-muted">
+                                    <%- game.icerik.substring(0,100) %>..</p>
+                                </span>
+                                </p>
+                              </div>
+                          </a>
+
+
+                          </div>
+                          <% }); %>
+
+
+                        </div>
+                      </div>

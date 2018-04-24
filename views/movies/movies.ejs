@@ -1,0 +1,36 @@
+
+<% include ../partials/header %>
+<div class="container">
+
+    <div class="card-columns ">
+  
+      <% foundmovies.forEach( (movies)=>{ %>
+        <div>
+
+                    <a href="/moviess/<%=movies._id%>" style="color: #fff;">
+          
+          <div class="card text-center colmuns" style="border: 2px solid #9b1111 ">
+              <div class="card-header">
+                  <h3 class="text-center">
+                    <%=  movies.title %>
+                  </h3>
+                </div>
+          <img class="card-img-top" src="<%=movies.image %>" >
+          <div class="card-body bg-dark">
+            
+              <h4 class="card-text">
+                  <%= movies.content %>
+              </h4>
+              <p class="card-text">
+                  <span class="text-muted">
+                      <%- movies.icerik.substring(0,100) %>..</p>
+                  </span>
+              </p>
+          </div>
+      </a>
+     
+
+  </div>
+  <% }); %>
+
+</div>

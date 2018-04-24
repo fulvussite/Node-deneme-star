@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="main-show">
+            <h1 class="display-3 text-center main-title"> <%= foundHaber.title %></h1>
+           
+            <div class="row bg-light text-dark main ">
+              
+                        <div class="col-9">
+                                <h4 class="text-center">
+                                        <%= foundHaber.content %>
+                                </h4>
+                        </div>
+                        <div class="col-3">
+                            <p class="text-muted"> Posted on :<%= foundHaber.date%> </p>
+                        </div>                            
+            </div>
+           <div class="main-content">
+                <%- foundHaber.icerik %>
+           </div>
+           
+
+           
+    </div>
+
+</div>
+
+

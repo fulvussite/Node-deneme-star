@@ -1,0 +1,95 @@
+<% include ../partials/header %>
+    <div class="container">
+        <div class="main-show">
+            <h5 class="text-right main-title">
+
+            </h5>
+
+            <div class="row bg-light text-dark main ">
+
+                <div class="col-9">
+                    <h4 class="text-center">
+
+                    </h4>
+                </div>
+                <div class="col-3">
+                </div>
+            </div>
+            <div class="main-content">
+
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+
+                            <th scope="col">ID</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">subTitle</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Show</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <% foundmovies.forEach( (movies)=>{ %>
+
+                                <th scope="row"></th>
+                                <td>
+
+
+                                    <%-  movies.id.substring(20,24) %>
+
+                                </td>
+                                <td>
+                                       
+
+                                       
+
+
+                                </td>
+                                <td>
+
+
+                                    <%-  movies.title.substring(0,50) %>
+
+                                </td>
+                                <td>
+
+                                  
+
+                                </td>
+                                <td>
+                                    <%-  movies.icerik.substring(0,50) %>
+
+
+                                </td>
+                                <td>
+                                    <a href="/moviess/<%=movies._id%>" class="btn btn-dark"> Show </a>
+                                </td>
+                                <td>
+                                    <a href="" class="btn btn-success"> Edit </a>
+                                </td>
+                                <td>
+
+                                    <form class="col" action="/moviess/<%=movies._id%>?_method=DELETE" method="POST">
+                                        <button class="btn btn-danger">Delete</button>
+                                    </form>
+                                </td>
+
+                        </tr>
+                        <% }); %>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+        </div>
+
+    </div>

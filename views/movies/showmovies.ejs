@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="main-show">
+            <h3 class="display-4 text-center main-title"> <%= foundmovies.title %></h3>
+           
+            <div class="row bg-light text-dark main ">
+              
+                        <div class="col-9">
+                                <h4 class="text-center">
+                                        <%= foundmovies.content %>
+                                </h4>
+                        </div>
+                        <div class="col-3">
+                            <p class="text-muted"> Posted on :<%= foundmovies.date%> </p>
+                        </div>                            
+            </div>
+           <div class="main-content">
+                <%- foundmovies.icerik %>
+           </div>
+           
+
+           
+    </div>
+
+</div>
+
+

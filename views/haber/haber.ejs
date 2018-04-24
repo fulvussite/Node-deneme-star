@@ -1,0 +1,36 @@
+
+<% include ../partials/header %>
+<div class="container">
+
+    <div class="card-columns ">
+  
+      <% foundHaber.forEach( (haber)=>{ %>
+        <div>
+
+                    <a href="/habers/<%=haber._id%>" style="color: #fff;">
+          
+          <div class="card text-center colmuns" style="border: 2px solid #0f770f" >
+              <div class="card-header">
+                  <h3 class="text-center">
+                    <%=  haber.title %>
+                  </h3>
+                </div>
+          <img class="card-img-top" src="<%=haber.image %>" >
+          <div class="card-body bg-dark">
+            
+              <h4 class="card-text">
+                  <%= haber.content %>
+              </h4>
+              <p class="card-text">
+                  <span class="text-muted">
+                      <%- haber.icerik.substring(0,100) %>..</p>
+                  </span>
+              </p>
+          </div>
+      </a>
+     
+
+  </div>
+  <% }); %>
+
+</div>

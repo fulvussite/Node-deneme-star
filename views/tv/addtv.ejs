@@ -1,0 +1,57 @@
+<% include ../partials/header %>
+    <div class="container">
+    
+        <form class="main-show">
+            <div class="form-grouup">
+                    <h1>Add tv</h1>
+                <label for="tvtitle">tv Title</label>
+                <input type="text" class="form-control" id="tvtitle" placeholder="Enter Title For tv">
+            </div>
+            <div class="form-grouup">
+                <label for="tvimage"> tv Image Url</label>
+                <input type="text" class="form-control" id="tvimage" placeholder="Enter İmage URL For tv">
+            </div>
+            <div class="form-grouup">
+                    <label for="tvcontent"> tv Content Title</label>
+                    <input type="text" class="form-control" id="tvcontent" placeholder="Enter Title For Content">
+                </div>
+                <br>
+            <textarea name="editor" id="myTextArea"></textarea>  
+            <br>
+            <button class="btn btn-success" id="myButton"> Submit</button>
+           
+        </form>
+
+    </div>
+
+
+    <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor');
+    </script>
+    <script>
+        $(document).ready(function () {
+                    $("#myButton").click(function () {
+                        var title = $("#tvtitle").val();
+                        var image = $("#tvimage").val();
+                        var content = $("#tvcontent").val();
+                        var icerik = CKEDITOR.instances.myTextArea.getData();
+
+                        var data = {
+                            title: title,
+                            image:image,
+                            content:content,
+                            icerik:icerik,
+                        }
+
+                        $.post('addtv', {
+                                data: data
+                            })
+                            .then(function (addedtv) {
+                                console.log(addedtv);
+
+                            });
+                    });
+                });
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

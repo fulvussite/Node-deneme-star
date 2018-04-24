@@ -1,0 +1,100 @@
+<% include ./partials/header %>
+</div>
+<div class="container">
+        <div class="arama">
+                <form action="/data" method="GET" class="input-group mb-3">
+        
+                    <input class="form-control form-control-lg" type="text" placeholder="Search.." name="q">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-danger" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+        
+                        </button>
+                    </div>
+                </form>
+            </div>
+         
+                <div>
+                    <% veri["results"].forEach(function(sonuc){%>
+        
+        
+                        <table>
+                            <tr>
+                                <td>
+                                    <h1> Name </h1>
+                                </td>
+                                <td>
+                                    <h1>
+                                       : <%=sonuc["name"]%>
+                                    </h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1> Heigth </h1>
+                                </td>
+                                <td>
+                                    <h1>
+                                       : <%=sonuc["height"]%> cm
+                                    </h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1> Mass </h1>
+                                </td>
+                                <td>
+                                    <h1>
+                                       : <%=sonuc["mass"]%> kg
+                                    </h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1> Hair Color </h1>
+                                </td>
+                                <td>
+                                    <h1>
+                                       : <%=sonuc["hair_color"]%>
+                                    </h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1> Birth Year </h1>
+                                </td>
+                                <td>
+                                    <h1>
+                                       : <%=sonuc["birth_year"]%>
+                                    </h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1>Eye Color </h1>
+                                </td>
+                                <td>
+                                    <h1>
+                                       : <%=sonuc["eye_color"]%>
+                                    </h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1> Gender </h1>
+                                </td>
+                                <td>
+                                    <h1>
+                                       : <%=sonuc["gender"]%>
+                                    </h1>
+                                </td>
+                            </tr>
+        
+        
+        
+                        </table>
+        
+                        <%})%>
+        
+        
+                    </div>

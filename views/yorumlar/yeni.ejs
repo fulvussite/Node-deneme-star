@@ -1,0 +1,19 @@
+<div class="container">
+
+
+
+    <form action="/community/<%= community._id %>/yorumlar" method="POST">
+
+        <div class="input-group mb-3">
+            <input placeholder="Add Comment" aria-label="Recipient's username" aria-describedby="basic-addon2" class="form-control" type="text"
+                name="yorum[text]">
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">
+                    <button class="btn btn-danger">Add Comment</button>
+                </span>
+            </div>
+        </div>
+
+    </form>
+
+</div>

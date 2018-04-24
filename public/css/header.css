@@ -1,0 +1,137 @@
+body {
+    background-color: #000000;
+    background-image: url(http://untroubled.org/backgrounds/space/stars.gif);
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+i {
+    color: white;
+}
+
+.starbtn {
+    background-color: #6c757d;
+}
+
+.planet {
+    width: 30%;
+}
+
+.arama {
+    margin: 5rem 0rem 5rem 0rem;
+}
+
+
+
+table {
+    margin-bottom: 5rem;
+}
+
+.admin {
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+    text-align: right;
+}
+
+body {
+    background-color: #000000;
+    background-image: url(http://untroubled.org/backgrounds/space/stars.gif);
+}
+
+.header {
+    background-image: url(./bgimg.png);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center;
+    padding: 6rem;
+    background-size: cover;
+    height: 20rem;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+i {
+    color: white;
+}
+
+.navlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin {
+    margin-top: .5rem;
+    margin-bottom: .25rem;
+    text-align: right;
+}
+
+.newshead:hover {
+    color: #0f770f;
+}
+
+.newshead {
+    color: white;
+}
+
+.movieshead {
+    color: white;
+}
+
+.movieshead:hover {
+    color: #9b1111;
+}
+
+.tvhead {
+    color: white;
+}
+
+.tvhead:hover {
+    color: #1139bf;
+}
+
+.gamehead {
+    color: white;
+}
+
+.gamehead:hover {
+    color: #ffc300;
+}
+
+.stormtrooper{
+    margin-right: auto;
+}
+.stormtrooper img {
+    max-width: 35px;
+}
+table{
+    font: 700 1em "Pathway Gothic One", sans-serif;
+    letter-spacing: .15em;
+    color: #ff6;
+    overflow: hidden;
+    margin: auto;
+}
+
+table h1 {
+    padding-right: 1rem;
+}

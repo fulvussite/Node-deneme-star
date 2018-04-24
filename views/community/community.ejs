@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+      <div class="container">
+        <% community.forEach(function(community){ %>
+            <div class="list-group main-show" style="border: 1px solid #fff">
+
+                <a href="/community/<%= community._id %>" style="color: #fff;">
+                    <div class="row">
+
+                        <div class="col-3">
+                            <img class="mr-3" src="<%= community.resim %>" style="max-width: 200px;">
+                        </div>
+                        <div class="col-9 colmuns">
+                            <div class="main-title">
+
+                                <h3 class="text-center ">
+                                    <%= community.adi %>
+                                </h3>
+                                <hr>
+                            </div>
+                            <p>
+                                <%- community.aciklama.substring(0,150) %> ..
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </a>
+
+            </div>
+            <%	}); %>

@@ -1,0 +1,103 @@
+<% include ../partials/header %>
+    <div class="container">
+        <div class="main-show">
+            <h5 class="text-right main-title">
+                <%= currentUser.username%>
+            </h5>
+
+            <div class="row bg-light text-dark main ">
+
+                <div class="col-9">
+                    <h4 class="text-center">
+
+                    </h4>
+                </div>
+                <div class="col-3">
+                </div>
+            </div>
+            <div class="main-content">
+               
+                    
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">News</th>
+                            <th scope="col">Movies</th>
+                            <th scope="col">Tv Series</th>
+                            <th scope="col">Game + Shop</th>
+                            <th scope="col">Community</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Add</th>
+                            <td>
+                                
+                                    <a href="/addhaber" class="list-group-item list-group-item-primary"> Add News </a>
+                              
+                            </td>
+                            <td>
+                               
+                                    <a href="/addmovies" class="list-group-item list-group-item-success"> Add Movies </a>
+                               
+                            </td>
+                            <td>
+                              
+                                    <a href="/addtv"class="list-group-item list-group-item-warning">Add Tv Series </a>
+                            
+                            </td>
+                            <td>
+                                
+                                    <a href="/addgame"class="list-group-item list-group-item-info">Add Game + Shop </a>
+                            
+                            </td><td>
+                                
+                                    <a href="community/yeni" class="list-group-item list-group-item-danger">Add Community</a>
+                            
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">List</th>
+                            <td>
+                                
+                                    <a href="/haberlist" class="list-group-item list-group-item-primary">News List</a>
+                              
+                            </td>
+                            <td>
+                               
+                                    <a href="/movieslist" class="list-group-item list-group-item-success">Movies List</a>
+                               
+                            </td>
+                            <td>
+                              
+                                    <a href="/tvlist"class="list-group-item list-group-item-warning">Tv Series List</a>
+                            
+                            </td>
+                            <td>
+                                
+                                    <a href="/gamelist"class="list-group-item list-group-item-info">Game + Shop List</a>
+                            
+                            </td>
+                            
+                            <td>
+                                
+                                    <a href="/list"class="list-group-item list-group-item-danger">Community List</a>
+                            
+                            </td>
+                            
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+

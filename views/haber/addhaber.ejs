@@ -1,0 +1,59 @@
+<% include ../partials/header %>
+    <div class="container">
+
+        <form class="main-show">
+            <h1>Add News</h1>
+
+            <div class="form-grouup">
+                <label for="newstitle"> News Title</label>
+                <input type="text" class="form-control" id="newstitle" placeholder="Enter Title For News">
+            </div>
+            <div class="form-grouup">
+                <label for="newsimage"> News Image Url</label>
+                <input type="text" class="form-control" id="newsimage" placeholder="Enter İmage URL For News">
+            </div>
+            <div class="form-grouup">
+                <label for="newscontent"> News Content Title</label>
+                <input type="text" class="form-control" id="newscontent" placeholder="Enter Title For Content">
+            </div>
+            <br>
+
+            <textarea name="editor" id="myTextArea"></textarea>
+            <br>
+            <button class="btn btn-success" id="myButton"> submit</button>
+
+        </form>
+
+    </div>
+
+
+    <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor');
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#myButton").click(function () {
+                var title = $("#newstitle").val();
+                var image = $("#newsimage").val();
+                var content = $("#newscontent").val();
+                var icerik = CKEDITOR.instances.myTextArea.getData();
+
+                var data = {
+                    title: title,
+                    image: image,
+                    content: content,
+                    icerik: icerik,
+                }
+
+                $.post('addhaber', {
+                    data: data
+                })
+                    .then(function (addedHaber) {
+                        console.log(addedHaber);
+
+                    });
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

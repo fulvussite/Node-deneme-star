@@ -1,0 +1,68 @@
+<% include ../partials/header %>
+    <div class="container">
+        <div class="main-show">
+            <h5 class="text-right main-title">
+
+            </h5>
+
+            <div class="row bg-light text-dark main ">
+
+                <div class="col-9">
+                    <h4 class="text-center">
+
+                    </h4>
+                </div>
+                <div class="col-3">
+                </div>
+            </div>
+            <div class="main-content">
+
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+
+                            <th scope="col">ID</th>
+
+                            <th scope="col">Title</th>
+
+                            <th scope="col">Content</th>
+                            <th scope="col">Show</th>
+
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <% community.forEach(function(community){ %>
+
+                                <th scope="row"></th>
+                                <td>
+
+
+                                    <%-  community.id.substring(20,24) %>
+
+                                </td>
+
+                                <td>
+
+
+                                    <%-  community.adi.substring(0,25) %>
+
+                                </td>
+                                <td>
+                                    <%- community.aciklama.substring(0,25) %>
+                                </td>
+                                <td>
+                                    <a href="/community/<%=community._id%>" class="btn btn-dark"> Show </a>
+                                </td>
+                                <td>
+                                    <form class="col" action="/community/<%=community._id%>?_method=DELETE" method="POST">
+                                        <button class="btn btn-danger">Delete</button>
+                                    </form>
+                                </td>
+                        </tr>
+                        <% }); %>
+                    </tbody>

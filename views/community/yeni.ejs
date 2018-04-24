@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+<div class="container">
+<form action="/community"  class="main-show" method="POST">
+    <div class="form-group">
+        <label > Community Title</label>
+        <input class="form-control" type="text" name="adi" placeholder="Add New Title">
+    </div>
+    <div class="form-group">
+        <label > Community URL</label>
+        <input class="form-control" type="text" name="resim" placeholder="Image URL For Community">
+    </div>
+    <div  class="form-group">
+          <label > Community Text</label>
+            <textarea name="aciklama" type="text" placeholder="Metin Giriniz" id="community" class="form-control"></textarea>
+    </div>
+
+
+  
+    <div class="form-group">
+        <button class="btn btn-primary ">Add</button>
+    </div>
+</form>
+</div>
+<script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('community');
+</script>

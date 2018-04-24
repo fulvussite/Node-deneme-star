@@ -1,0 +1,57 @@
+<% include ../partials/header %>
+    <div class="container">
+    
+        <form class="main-show">
+            <div class="form-grouup">
+                    <h1>Add Movies</h1>
+                <label for="moviestitle">Movies Title</label>
+                <input type="text" class="form-control" id="moviestitle" placeholder="Enter Title For Movies">
+            </div>
+            <div class="form-grouup">
+                <label for="moviesimage"> Movies Image Url</label>
+                <input type="text" class="form-control" id="moviesimage" placeholder="Enter İmage URL For Movies">
+            </div>
+            <div class="form-grouup">
+                    <label for="moviescontent"> Movies Content Title</label>
+                    <input type="text" class="form-control" id="moviescontent" placeholder="Enter Title For Content">
+                </div>
+                <br>
+            <textarea name="editor" id="myTextArea"></textarea>  
+            <br>
+            <button class="btn btn-success" id="myButton"> Submit</button>
+           
+        </form>
+
+    </div>
+
+
+    <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor');
+    </script>
+    <script>
+        $(document).ready(function () {
+                    $("#myButton").click(function () {
+                        var title = $("#moviestitle").val();
+                        var image = $("#moviesimage").val();
+                        var content = $("#moviescontent").val();
+                        var icerik = CKEDITOR.instances.myTextArea.getData();
+
+                        var data = {
+                            title: title,
+                            image:image,
+                            content:content,
+                            icerik:icerik,
+                        }
+
+                        $.post('addmovies', {
+                                data: data
+                            })
+                            .then(function (addedmovies) {
+                                console.log(addedmovies);
+
+                            });
+                    });
+                });
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

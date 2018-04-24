@@ -1,0 +1,57 @@
+
+
+.main-show {
+    background-color: #292c2e;
+    margin: 1rem;
+    padding: 1rem;
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 0.75rem;
+}
+
+.main-title {
+    margin: 1rem;
+    font-size: 45px;
+}
+
+
+
+.main-content {
+    padding: 1rem;
+}
+
+.list {
+    background-color: #6c757d;
+    margin: 1rem;
+    padding: 1rem;
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 0.75rem;
+}
+
+.list img {
+    max-width: 50%;
+}
+
+.game-show {
+    background-color: #292c2e;
+    margin: 1rem;
+    padding: 1rem;
+    color: whitesmoke;
+    border: 1px solid #ffc300;
+    border-radius: 0.75rem;
+}
+.main-home{
+    background: none;
+}
+
+.colmuns{
+    background-color: #292c2e;
+    margin-top:1rem;
+}
+
+.main-hr{
+    border-top: 2px solid red
+     ;
+}
+

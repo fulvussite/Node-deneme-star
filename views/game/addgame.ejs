@@ -1,0 +1,57 @@
+<% include ../partials/header %>
+    <div class="container">
+    
+        <form class="main-show">
+            <div class="form-grouup">
+                    <h1>Add game</h1>
+                <label for="gametitle">game Title</label>
+                <input type="text" class="form-control" id="gametitle" placeholder="Enter Title For game">
+            </div>
+            <div class="form-grouup">
+                <label for="gameimage"> game Image Url</label>
+                <input type="text" class="form-control" id="gameimage" placeholder="Enter İmage URL For game">
+            </div>
+            <div class="form-grouup">
+                    <label for="gamecontent"> game Content Title</label>
+                    <input type="text" class="form-control" id="gamecontent" placeholder="Enter Title For Content">
+                </div>
+                <br>
+            <textarea name="editor" id="myTextArea"></textarea>  
+            <br>
+            <button class="btn btn-success" id="myButton"> Submit</button>
+           
+        </form>
+
+    </div>
+
+
+    <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor');
+    </script>
+    <script>
+        $(document).ready(function () {
+                    $("#myButton").click(function () {
+                        var title = $("#gametitle").val();
+                        var image = $("#gameimage").val();
+                        var content = $("#gamecontent").val();
+                        var icerik = CKEDITOR.instances.myTextArea.getData();
+
+                        var data = {
+                            title: title,
+                            image:image,
+                            content:content,
+                            icerik:icerik,
+                        }
+
+                        $.post('addgame', {
+                                data: data
+                            })
+                            .then(function (addedgame) {
+                                console.log(addedgame);
+
+                            });
+                    });
+                });
+    </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
